@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "data": "libs/data",
     "generic-test-bed": "apps/generic-test-bed",
     "generic-test-bed-e2e": "apps/generic-test-bed-e2e"
   }
