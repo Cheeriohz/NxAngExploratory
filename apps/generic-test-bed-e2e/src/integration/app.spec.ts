@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getAddTodoButton, getGreeting, getTodos } from '../support/app.po';
 
 describe('generic-test-bed', () => {
   beforeEach(() => cy.visit('/'));
@@ -10,4 +10,10 @@ describe('generic-test-bed', () => {
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome generic-test-bed');
   });
+
+  it('should display todos', () => {
+    getTodos().should((t) => expect(t.length).equal(2));
+    getAddTodoButton().click();
+    getTodos().should((t) => expect(t.length).equal(3));
+  })
 });

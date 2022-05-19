@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "api": "apps/api",
     "generic-test-bed": "apps/generic-test-bed",
     "generic-test-bed-e2e": "apps/generic-test-bed-e2e"
   }

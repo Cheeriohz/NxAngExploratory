@@ -63,7 +63,10 @@
           "browserTarget": "generic-test-bed:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/generic-test-bed/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",

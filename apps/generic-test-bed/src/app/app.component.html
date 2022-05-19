@@ -1,1 +1,7 @@
+<ul>
+    <li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
+</ul>
+
+<button id="add-todo" (click)="addTodo()" >Add Todo</button>
+
 <localexp-nx-welcome></localexp-nx-welcome>
