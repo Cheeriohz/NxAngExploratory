@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { pipe, Subscription, take } from 'rxjs';
 import { Todo } from '@localexp/data';
 
 @Component({
@@ -24,12 +24,18 @@ export class AppComponent implements OnDestroy {
 
   private fetch(): void
   {
-    this.subs.add( this.http.get<Todo[]>('/api/todos').subscribe((t) => (this.todos = t)) );
+    this.http.get<Todo[]>('/api/todos')
+      .pipe(take(1))
+      .subscribe((t) => (this.todos = t));
   }
 
   public addTodo() : void
   {
-    this.todos = [...this.todos, { title: `Todo ${Math.floor(Math.random() * 1000)}` } ];
+    this.http.post('/api/addTodo', {})
+      .pipe(take(1))
+      .subscribe(() => {
+        this.fetch();
+    })
   }
 
 }
