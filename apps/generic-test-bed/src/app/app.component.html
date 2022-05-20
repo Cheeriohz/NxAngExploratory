@@ -1,7 +1,15 @@
-<ul>
-    <li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
-</ul>
+<div class="container">
+    <h1>Work to complete</h1>
+    <div id="general-content">
+        <ul>
+            <li *ngFor="let t of todos" class="todo contextual">{{ t.title }}</li>
+        </ul>
+    </div>
+    <button id="add-todo" class="large-pill-button" (click)="addTodo()" >Add Todo</button>
+</div>
 
-<button id="add-todo" (click)="addTodo()" >Add Todo</button>
 
-<localexp-nx-welcome></localexp-nx-welcome>
+<!-- <localexp-nx-welcome></localexp-nx-welcome> -->
+
+
+

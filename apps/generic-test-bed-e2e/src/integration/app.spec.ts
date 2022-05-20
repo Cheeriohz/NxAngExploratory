@@ -8,7 +8,7 @@ describe('generic-test-bed', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome generic-test-bed');
+    getGreeting().contains('Work to complete');
   });
 
   it('should display todos', () => {
