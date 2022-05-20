@@ -10,7 +10,7 @@ import { Todo } from '@localexp/data';
 })
 export class AppComponent implements OnDestroy {
   title = 'generic-test-bed';
-  todos: Todo[] = [{ title: 'todo 1'},{ title: "todo 2"}];
+  todos: Todo[] = [];
   subs: Subscription = new Subscription();
 
   constructor(private readonly http: HttpClient)
