@@ -23,7 +23,7 @@ li.contextual
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     &:hover {
-        background-color: hsla(162, 47%, 50%, 1);
+        background-color: rgb(171, 35, 35);
         color: rgba(255, 255, 255, 1) !important;
     }
 }

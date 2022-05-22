@@ -1,8 +1,10 @@
 <div class="container">
     <h1>Work to complete</h1>
-    <div id="general-content">
+    <div id="general-content"
+        infinite-scroll
+        (scrolled)="onScrollDown($event)">
         <ul>
-            <li *ngFor="let t of todos" class="todo contextual">{{ t.title }}</li>
+            <li *ngFor="let t of todos; trackBy:idOfTodo" class="todo contextual" (click)="deleteTodo(t)" >{{ t.title }}</li>
         </ul>
     </div>
     <button id="add-todo" class="large-pill-button" (click)="addTodo()" >Add Todo</button>
